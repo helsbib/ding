@@ -1,0 +1,6 @@
+; $Id$
+name = Trampoline
+description = "Provides a lightweight proxy to allow AJAX/AHAH callbacks to avoid bootstrapping Drupal."
+package = Ding!
+core = 6.x
+
