@@ -95,6 +95,11 @@ function ding_event_ctools_plugin_directory($module, $plugin) {
  * Archive old events, if this setting is enabled.
  */
 function ding_event_archive_past_events() {
+  // Do nothing if archiving is not enabled.
+  if (!variable_get('ding_event_archive_past_events', FALSE)) {
+    return;
+  }
+
   // CCK field name for the date/time field on event nodes.
   $fieldname = 'field_datetime';
 
