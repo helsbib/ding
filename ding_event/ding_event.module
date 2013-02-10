@@ -111,7 +111,7 @@ function ding_event_archive_past_events() {
     SELECT n.nid FROM {node} AS n
     INNER JOIN ' . $dbinfo['table'] . ' AS cte ON (n.vid = cte.vid)
     WHERE ' . $colname . ' IS NOT NULL
-    AND ' . $colname . ' < date_sub(CURRENT_TIMESTAMP, INTERVAL 1 DAY)
+    AND ' . $colname . ' < date_sub(CURRENT_TIMESTAMP, INTERVAL 2 DAYS)
     AND n.status = 1
   ');
 
