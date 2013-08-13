@@ -13,6 +13,10 @@ function ding_content_content_default_fields() {
     'display_settings' => array(
       'weight' => '3',
       'parent' => '',
+      '4' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
       'label' => array(
         'format' => 'hidden',
       ),
@@ -23,10 +27,6 @@ function ding_content_content_default_fields() {
       'full' => array(
         'format' => 'hidden',
         'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'hidden',
-        'exclude' => 1,
       ),
       '2' => array(
         'format' => 'image_plain',
@@ -92,7 +92,7 @@ function ding_content_content_default_fields() {
     'field_name' => 'field_file_attachments',
     'type_name' => 'article',
     'display_settings' => array(
-      'weight' => '5',
+      'weight' => '11',
       'parent' => '',
       'label' => array(
         'format' => 'above',
@@ -338,7 +338,7 @@ function ding_content_content_default_fields() {
     ),
     'widget_active' => '1',
     'type' => 'text',
-    'required' => '1',
+    'required' => '0',
     'multiple' => '0',
     'module' => 'text',
     'active' => '1',
@@ -369,13 +369,13 @@ function ding_content_content_default_fields() {
     'field_name' => 'field_ting_refs',
     'type_name' => 'article',
     'display_settings' => array(
-      'weight' => '6',
+      'weight' => '10',
       'parent' => '',
       'label' => array(
         'format' => 'above',
       ),
       'teaser' => array(
-        'format' => 'hidden',
+        'format' => 'default',
         'exclude' => 0,
       ),
       'full' => array(
@@ -414,13 +414,91 @@ function ding_content_content_default_fields() {
     ),
   );
 
+  // Exported field: field_category
+  $fields['event-field_category'] = array(
+    'field_name' => 'field_category',
+    'type_name' => 'event',
+    'display_settings' => array(
+      'weight' => '27',
+      'parent' => '',
+      '2' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      '3' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      '4' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      'mobile' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      'label' => array(
+        'format' => 'hidden',
+      ),
+      'teaser' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      'full' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '1076|Musik
+1124|Scene: Teater
+1325|Scene: Show
+2669|Event
+1078|Udstilling
+1467|Film og litteratur
+2012|Rundvisninger
+8934|Viden
+8932|Mad
+8933|For børn
+',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Category',
+      'weight' => '27',
+      'description' => 'Bruges til eksport til Kulturværftet.',
+      'type' => 'optionwidgets_select',
+      'module' => 'optionwidgets',
+    ),
+  );
+
   // Exported field: field_content_images
   $fields['event-field_content_images'] = array(
     'field_name' => 'field_content_images',
     'type_name' => 'event',
     'display_settings' => array(
-      'weight' => '4',
+      'weight' => '5',
       'parent' => '',
+      '4' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
       'label' => array(
         'format' => 'hidden',
       ),
@@ -431,10 +509,6 @@ function ding_content_content_default_fields() {
       'full' => array(
         'format' => 'hidden',
         'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'hidden',
-        'exclude' => 1,
       ),
       '2' => array(
         'format' => 'image_plain',
@@ -492,79 +566,6 @@ function ding_content_content_default_fields() {
       'description' => 'Upload af billeder til indsættelse i brødteksten.',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',
-    ),
-  );
-
-  // Exported field: field_datetime
-  $fields['event-field_datetime'] = array(
-    'field_name' => 'field_datetime',
-    'type_name' => 'event',
-    'display_settings' => array(
-      'weight' => '-4',
-      'parent' => '',
-      'label' => array(
-        'format' => 'hidden',
-      ),
-      'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'default',
-        'exclude' => 1,
-      ),
-      'token' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '2' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '3' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-    ),
-    'widget_active' => '1',
-    'type' => 'datetime',
-    'required' => '1',
-    'multiple' => '0',
-    'module' => 'date',
-    'active' => '1',
-    'granularity' => array(
-      'year' => 'year',
-      'month' => 'month',
-      'day' => 'day',
-      'hour' => 'hour',
-      'minute' => 'minute',
-    ),
-    'timezone_db' => '',
-    'tz_handling' => 'none',
-    'todate' => 'optional',
-    'repeat' => 0,
-    'repeat_collapsed' => '',
-    'default_format' => 'long',
-    'widget' => array(
-      'default_value' => 'blank',
-      'default_value_code' => '',
-      'default_value2' => 'blank',
-      'default_value_code2' => '',
-      'input_format' => 'Y-m-d H:i',
-      'input_format_custom' => '',
-      'increment' => '1',
-      'text_parts' => array(),
-      'year_range' => '-3:+3',
-      'label_position' => 'above',
-      'label' => 'Tid & dato',
-      'weight' => '-4',
-      'description' => '',
-      'type' => 'date_popup',
-      'module' => 'date',
     ),
   );
 
@@ -628,6 +629,175 @@ function ding_content_content_default_fields() {
       'description' => 'Skriv entrépris – 0 for gratis entré.',
       'type' => 'number',
       'module' => 'number',
+    ),
+  );
+
+  // Exported field: field_export_image
+  $fields['event-field_export_image'] = array(
+    'field_name' => 'field_export_image',
+    'type_name' => 'event',
+    'display_settings' => array(
+      'weight' => '29',
+      'parent' => '',
+      '2' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      '3' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      '4' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      'mobile' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      'label' => array(
+        'format' => 'hidden',
+      ),
+      'teaser' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      'full' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      'token' => array(
+        'format' => 'image_plain',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'filefield',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'filefield',
+    'active' => '1',
+    'list_field' => '0',
+    'list_default' => 1,
+    'description_field' => '0',
+    'widget' => array(
+      'file_extensions' => 'png gif jpg jpeg',
+      'file_path' => '',
+      'progress_indicator' => 'bar',
+      'max_filesize_per_file' => '',
+      'max_filesize_per_node' => '',
+      'max_resolution' => '0',
+      'min_resolution' => '0',
+      'alt' => '',
+      'custom_alt' => 0,
+      'title' => '',
+      'custom_title' => 0,
+      'title_type' => 'textfield',
+      'default_image' => NULL,
+      'use_default_image' => 0,
+      'insert' => 0,
+      'insert_styles' => array(
+        'auto' => 0,
+        'link' => 0,
+        'image' => 0,
+        'imagecache_80_x' => 0,
+        'imagecache_120_120' => 0,
+        'imagecache_180_x' => 0,
+        'imagecache_210_x' => 0,
+        'imagecache_680_200_crop' => 0,
+        'imagecache_ting_search_carousel' => 0,
+      ),
+      'insert_default' => 'auto',
+      'insert_class' => '',
+      'insert_width' => '',
+      'label' => 'Export Image',
+      'weight' => '29',
+      'description' => 'Billede til eksport til Kulturværftet. Størrelsesforholdet skal være 1:2.48, f.eks. 620x250.',
+      'type' => 'imagefield_widget',
+      'module' => 'imagefield',
+    ),
+  );
+
+  // Exported field: field_facility
+  $fields['event-field_facility'] = array(
+    'field_name' => 'field_facility',
+    'type_name' => 'event',
+    'display_settings' => array(
+      'weight' => '26',
+      'parent' => '',
+      '2' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      '3' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      '4' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      'mobile' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      'label' => array(
+        'format' => 'hidden',
+      ),
+      'teaser' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      'full' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '1638|Arkaden
+1553|Biblioteket 1. etage 
+1275|Biblioteket 2. etage
+1939|Biblioteket 3. etage
+1280|Foyer
+1276|Green Room
+1938|Grotten
+1937|Hulen
+1278|Krydsfeltet
+1258|Lille Scene
+1697|Møde- og konferenceområde
+1338|Prismen
+3813|Røde Plads
+2113|Sekretariatet
+1370|Spisehuset: Moderne dansk folkekøkken
+1242|Store Scene
+1695|Terrassen
+2651|Toldkammeret
+1277|Værftsmuseet
+',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Facility',
+      'weight' => '26',
+      'description' => 'Bruges til eksport til Kulturværftet.',
+      'type' => 'optionwidgets_select',
+      'module' => 'optionwidgets',
     ),
   );
 
@@ -778,7 +948,7 @@ function ding_content_content_default_fields() {
     'field_name' => 'field_list_image',
     'type_name' => 'event',
     'display_settings' => array(
-      'weight' => '5',
+      'weight' => '6',
       'parent' => '',
       'label' => array(
         'format' => 'hidden',
@@ -854,12 +1024,80 @@ function ding_content_content_default_fields() {
     ),
   );
 
+  // Exported field: field_targetgroup
+  $fields['event-field_targetgroup'] = array(
+    'field_name' => 'field_targetgroup',
+    'type_name' => 'event',
+    'display_settings' => array(
+      'weight' => '28',
+      'parent' => '',
+      '2' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      '3' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      '4' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      'mobile' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      'label' => array(
+        'format' => 'hidden',
+      ),
+      'teaser' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      'full' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '1',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '1091|Børn/familie
+1092|Ung
+1253|Senior
+1256|Voksen
+',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Target group',
+      'weight' => '28',
+      'description' => 'Bruges til eksport til Kulturværftet. (Hold CTRL eller ⌘ nede og klik for at vælge flere typer)',
+      'type' => 'optionwidgets_select',
+      'module' => 'optionwidgets',
+    ),
+  );
+
   // Exported field: field_teaser
   $fields['event-field_teaser'] = array(
     'field_name' => 'field_teaser',
     'type_name' => 'event',
     'display_settings' => array(
-      'weight' => '2',
+      'weight' => '3',
       'parent' => '',
       'label' => array(
         'format' => 'hidden',
@@ -891,7 +1129,7 @@ function ding_content_content_default_fields() {
     ),
     'widget_active' => '1',
     'type' => 'text',
-    'required' => '1',
+    'required' => '0',
     'multiple' => '0',
     'module' => 'text',
     'active' => '1',
@@ -922,13 +1160,12 @@ function ding_content_content_default_fields() {
     'field_name' => 'field_ting_refs',
     'type_name' => 'event',
     'display_settings' => array(
-      'weight' => '9',
-      'parent' => '',
       'label' => array(
         'format' => 'above',
+        'exclude' => 0,
       ),
       'teaser' => array(
-        'format' => 'hidden',
+        'format' => 'default',
         'exclude' => 0,
       ),
       'full' => array(
@@ -1227,7 +1464,7 @@ function ding_content_content_default_fields() {
     ),
     'widget_active' => '1',
     'type' => 'text',
-    'required' => '1',
+    'required' => '0',
     'multiple' => '0',
     'module' => 'text',
     'active' => '1',
@@ -1297,15 +1534,16 @@ function ding_content_content_default_fields() {
       'target' => 'default',
       'rel' => '',
       'class' => '',
+      'title' => '',
     ),
     'display' => array(
       'url_cutoff' => '80',
     ),
     'url' => 0,
-    'title' => '',
+    'title' => 'optional',
     'title_value' => '',
     'enable_tokens' => 0,
-    'validate_url' => '',
+    'validate_url' => 1,
     'widget' => array(
       'default_value' => NULL,
       'default_value_php' => NULL,
@@ -1354,7 +1592,7 @@ function ding_content_content_default_fields() {
     ),
     'widget_active' => '1',
     'type' => 'text',
-    'required' => '1',
+    'required' => '0',
     'multiple' => '0',
     'module' => 'text',
     'active' => '1',
@@ -1417,7 +1655,7 @@ function ding_content_content_default_fields() {
     ),
     'widget_active' => '1',
     'type' => 'text',
-    'required' => '1',
+    'required' => '0',
     'multiple' => '0',
     'module' => 'text',
     'active' => '1',
@@ -1729,7 +1967,7 @@ function ding_content_content_default_fields() {
     ),
     'widget_active' => '1',
     'type' => 'text',
-    'required' => '1',
+    'required' => '0',
     'multiple' => '0',
     'module' => 'text',
     'active' => '1',
@@ -1759,7 +1997,10 @@ function ding_content_content_default_fields() {
   // Included for use with string extractors like potx.
   t('Bibliotek');
   t('Biblioteker');
+  t('Category');
   t('Entré');
+  t('Export Image');
+  t('Facility');
   t('Indholdsbilleder');
   t('Link');
   t('Listevisningsbillede');
@@ -1767,7 +2008,7 @@ function ding_content_content_default_fields() {
   t('Materialer og links');
   t('Overskrift');
   t('Smagsprøve');
-  t('Tid & dato');
+  t('Target group');
   t('Vedhæftede filer');
 
   return $fields;

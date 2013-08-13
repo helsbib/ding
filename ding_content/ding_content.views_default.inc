@@ -1460,21 +1460,53 @@ function ding_content_views_default_views() {
     'execution_type' => '1',
     'display_type' => '0',
     'hide_select_all' => 0,
-    'skip_confirmation' => 0,
     'display_result' => 1,
     'merge_single_action' => 0,
-    'selected_operations' => array(
-      'node_assign_owner_action' => 'node_assign_owner_action',
-      'views_bulk_operations_delete_node_action' => 'views_bulk_operations_delete_node_action',
-      'views_bulk_operations_script_action' => 'views_bulk_operations_script_action',
-      'node_make_sticky_action' => 'node_make_sticky_action',
-      'node_make_unsticky_action' => 'node_make_unsticky_action',
-      'views_bulk_operations_fields_action' => 'views_bulk_operations_fields_action',
-      'views_bulk_operations_taxonomy_action' => 'views_bulk_operations_taxonomy_action',
-      'node_promote_action' => 'node_promote_action',
-      'node_publish_action' => 'node_publish_action',
-      'node_unpromote_action' => 'node_unpromote_action',
-      'node_unpublish_action' => 'node_unpublish_action',
+    'operations' => array(
+      'node_assign_owner_action' => array(
+        'selected' => TRUE,
+        'skip_confirmation' => 0,
+      ),
+      'views_bulk_operations_delete_node_action' => array(
+        'selected' => TRUE,
+        'skip_confirmation' => 0,
+      ),
+      'views_bulk_operations_script_action' => array(
+        'selected' => TRUE,
+        'skip_confirmation' => 0,
+      ),
+      'node_make_sticky_action' => array(
+        'selected' => TRUE,
+        'skip_confirmation' => 0,
+      ),
+      'node_make_unsticky_action' => array(
+        'selected' => TRUE,
+        'skip_confirmation' => 0,
+      ),
+      'views_bulk_operations_fields_action' => array(
+        'selected' => TRUE,
+        'skip_confirmation' => 0,
+      ),
+      'views_bulk_operations_taxonomy_action' => array(
+        'selected' => TRUE,
+        'skip_confirmation' => 0,
+      ),
+      'node_promote_action' => array(
+        'selected' => TRUE,
+        'skip_confirmation' => 0,
+      ),
+      'node_publish_action' => array(
+        'selected' => TRUE,
+        'skip_confirmation' => 0,
+      ),
+      'node_unpromote_action' => array(
+        'selected' => TRUE,
+        'skip_confirmation' => 0,
+      ),
+      'node_unpublish_action' => array(
+        'selected' => TRUE,
+        'skip_confirmation' => 0,
+      ),
     ),
   ));
   $handler = $view->new_display('page', 'Page', 'page');
