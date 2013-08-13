@@ -87,7 +87,7 @@ function _ding_panels_content_theme_library_title_navigation($node, $base_url) {
   if ($node->type == 'library') {
     $links['blog'] = l(t('Blog'), $base_url . '/blog');
     $links['events'] = l(t('Events'), $base_url . '/arrangementer');
-    $links['facilities'] = l(t('Facilities'), $base_url . '/faciliteter');
+    //  $links['facilities'] = l(t('Facilities'), $base_url . '/faciliteter');
 
     if ($node->field_pc_booking_url[0]['value']) {
       if ($node->field_pc_booking_method[0]['value'] == 'popup') {
@@ -98,7 +98,7 @@ function _ding_panels_content_theme_library_title_navigation($node, $base_url) {
       }
     }
 
-    $links['about'] = l(t('About the library'), $base_url . '/om');
+    //  $links['about'] = l(t('About the library'), $base_url . '/om');
 
     // The "Local" page only contains a list of topics, so only show it if
     // there is at least one topic related to this library.
